@@ -67,7 +67,7 @@ body {
 .hero {
   position: relative;
   width: 100%;
-  height: 600px;
+  height: 100%px;
   overflow: hidden;
 }
 
@@ -293,6 +293,13 @@ body {
   align-items: center;
 }
 
+p, h1, h2, h3, a {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  text-align: center;
+}
+
+
 /* Mobile first style (asosiy CSS sizda bor) */
 
 /* Media queries */
@@ -463,4 +470,166 @@ body {
   .footer__li a {
     text-align: center; /* matn ham markazda */
   }
+}
+
+
+.footer__contacts {
+  display: flex;
+  justify-content: center;
+}
+
+.footer__ul {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: center;
+  text-align: center;
+  padding: 0;
+}
+
+.footer__li a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap; /* SIG‘MAGANI PASTGA TUSHADI */
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.footer__icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* ========================================= */
+
+/* Header */
+.header {
+    height: 101px;
+    background-color: #101D40;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.logo-and-link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.back-link {
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+}
+
+/* Hero / Buyurtma berish */
+.hero-title {
+    margin-top: 27px;
+    font-size: 48px;
+    color: #101D40;
+    text-align: center;
+}
+
+.hero-inner {
+    text-align: center;
+}
+
+/* Inputlar */
+.input {
+    border: none;
+    outline: none;
+    background-color: #D9D9D9;
+    color: #101D40;
+    font-size: 24px;
+    padding: 20px 30px;
+    border-radius: 100px;
+    box-sizing: border-box;
+}
+
+.tovar-nomi {
+    width: 100%;
+    max-width: 1080px;
+    height: 71px;
+    margin-top: 27px;
+}
+
+button{
+  cursor: pointer;
+}
+
+.haridor-ismi,
+.haridor-telefon,
+.haridor-manzil,
+.yetkazish-turi {
+    width: 100%;
+    max-width: 525px;
+    height: 71px;
+    margin-top: 27px;
+}
+
+/* Flex container for inputs */
+.d-flex {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* responsiv uchun */
+}
+
+/* Jo'natish tugmasi */
+.submit-button {
+    display: inline-block;
+    width: 208px;
+    height: 58px;
+    font-size: 26px;
+    border-radius: 70px;
+    background-color: #C6A15B;
+    color: white;
+    text-decoration: none;
+    line-height: 58px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+/* Responsiv dizayn */
+@media (max-width: 768px) {
+    .tovar-nomi,
+    .haridor-ismi,
+    .haridor-telefon,
+    .haridor-manzil,
+    .yetkazish-turi {
+        max-width: 90%; /* ekranga moslashadi */
+    }
+
+    .hero-title {
+        font-size: 36px;
+    }
+
+    .d-flex {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .submit-button {
+        width: 80%;
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 28px;
+    }
+
+    .submit-button {
+        width: 100%;
+        font-size: 20px;
+    }
 }
